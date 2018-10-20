@@ -1,3 +1,6 @@
+'''
+given file path, get list of names and list of np arrays containing data for each cell line
+'''
 import numpy as np
 from numpy import genfromtxt
 import csv
@@ -8,6 +11,7 @@ in_file = "RPKMs.csv"
 def main():
 	genes, data = process_data(in_file)
 	print genes
+	print data
 
 def process_data(file):
 	df=pd.read_csv(file,sep=',')
